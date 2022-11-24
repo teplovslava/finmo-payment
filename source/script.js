@@ -68,6 +68,15 @@ document.addEventListener('DOMContentLoaded',function(){
         burger.classList.remove('display-none')
       })
 
+      
+      const menuBurger = document.querySelector('.menu1')
+      const burgerBtn = document.querySelector('.open-right__menu')
+
+      burgerBtn.addEventListener('click',()=>{
+        burgerBtn.classList.toggle('openedBurger')
+        menuBurger.classList.toggle('active-burger')
+      })
+
 
       
 })
