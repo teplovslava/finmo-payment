@@ -77,6 +77,38 @@ document.addEventListener('DOMContentLoaded',function(){
         menuBurger.classList.toggle('active-burger')
       })
 
+      const burgerMain = document.querySelector('.burger-box')
+      const MainBurgerBtnOpen = document.querySelector('.mobile-menu')
+      const MainBurgerCloseBtn = document.querySelector('.burger-header button')
 
+      MainBurgerBtnOpen.addEventListener('click',()=>{
+        burgerMain.classList.add('activeMainBurger')
+      })
+
+
+      const burgerMainMenu = document.querySelectorAll('.burgerMenu li')
+
+    
+      burgerMainMenu.forEach(item=>{
+          item.classList.remove('active1')
+          item.addEventListener('click',function(){
+            burgerMainMenu.forEach(li=>li.classList.remove('active1'))
+                  item.classList.add('active1')
+      })}
+          
+      )
+      
+
+      MainBurgerCloseBtn.addEventListener('click',()=>{
+        burgerMain.classList.remove('activeMainBurger')
+        burgerMainMenu.forEach(item=>{
+          item.classList.remove('active1')
+          item.addEventListener('click',function(){
+            burgerMainMenu.forEach(li=>li.classList.remove('active1'))
+                  item.classList.add('active1')
+      })}
+          
+      )
+      })
       
 })
